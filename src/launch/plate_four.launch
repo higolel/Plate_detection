@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<launch>
+	<param name="model_xml" type="string" value="$(find plate_detection)/model/" />
+	<param name="ch_ttf" type="string" value="$(find plate_detection)/ttf/" />
+	<param name="output_image" type="string" value="$(find plate_detection)/image/" />
+
+	<node pkg="plate_detection" type="plate_detection_node" name="plate_right_front" output="screen" respawn="true">
+		<param name="video_path" type="string" value="rtsp://admin:rsxx1111@192.168.9.30:554/" />
+		<param name="cam" type="string" value="right_front" />
+	</node>
+
+	<node pkg="plate_detection" type="plate_detection_node" name="plate_left_front" output="screen" respawn="true">
+		<param name="video_path" type="string" value="rtsp://admin:rsxx1111@192.168.9.32:554/" />
+		<param name="cam" type="string" value="left_front" />
+	</node>
+
+	<!--
+	<node pkg="plate_detection" type="plate_detection_node" name="plate_right_after" output="screen" respawn="true">
+		<param name="video_path" type="string" value="rtsp://admin:rsxx1111@192.168.9.31:554/" />
+		<param name="cam" type="string" value="right_after" />
+	</node>
+
+	<node pkg="plate_detection" type="plate_detection_node" name="plate_left_after" output="screen" respawn="true">
+		<param name="video_path" type="string" value="rtsp://admin:rsxx1111@192.168.9.33:554/" />
+		<param name="cam" type="string" value="left_after" />
+	</node>
+	-->
+
+	<!--
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find plate_detection)/rviz/Plate_right_front.rviz" />
+	-->
+
+</launch>
