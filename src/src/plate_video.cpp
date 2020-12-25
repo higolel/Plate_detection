@@ -162,7 +162,7 @@ void Display()
 		for(auto st:res)
 		{
 		//	std::cout << "front " << st.getPlateName() << " : " << st.confidence << std::endl;
-			if(st.confidence > 0.85)
+			if(st.confidence > 0.95)
 			{
 				//输出识别结果 、识别置信度
 				string plate_name = st.getPlateName();
