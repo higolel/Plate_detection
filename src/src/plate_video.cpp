@@ -215,6 +215,8 @@ void Pub_plate_pic_message(std::string plate_str, cv::Mat license_plate_pic, cv:
 	plate_pic_msg.vin = "as00030";
 	plate_pic_msg.deviceId = "030车牌";
 	plate_pic_msg.pictureType = 2;
+	plate_pic_msg.lon = lon_;
+	plate_pic_msg.lat = lat_;
 	plate_pic_msg.licenseNum = plate_str;
 	plate_pic_msg.plateColor = 0;
 	plate_pic_msg.carColor = 0;
